@@ -1,4 +1,4 @@
-"""
+python"""
 Created on Thu Jan 10 22:01:28 2019
 
 @author: Kris
@@ -52,3 +52,5 @@ def animate(time):
 #animation
 anim = animation.FuncAnimation(fig, animate, frames=np.arange(time, int_time+1, time_step), interval=300, repeat=False)
 plt.show()
+
+#new comment on 013019
