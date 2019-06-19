@@ -47,20 +47,20 @@ class CirclePlot(GraphScene):
     } 
     
     def construct(self):
-      self.setup_axes(animate=True)
+      self.setup_axes(animate=True) //setup first axis
       circle1 = Circle(color=self.circle_color,radius=1)
       circle1.move_to(DOWN*2)
       func_graph1=self.get_graph(self.func_to_graph2,self.function_color)
       func_graph1a=self.get_graph(self.func_to_graph2, self.function_color)
         
-      self.graph_origin = 2.0*UP
+      self.graph_origin = 2.0*UP //setup second figure
       self.x_min = -10
       self.x_max = 10
       self.x_axis_width = 14
       self.x_leftmost_tick = -10
       self.x_tick_frequency = 1
       self.x_labeled_nums = range(-10,11,5)
-      self.setup_axes(animate=True)
+      self.setup_axes(animate=True) //setup second axis
       circle2 = Circle(color=self.circle_color,radius=1)
       circle2.move_to(UP*2)
       func_graph2=self.get_graph(self.func_to_graph2,self.function_color)
