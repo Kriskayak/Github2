@@ -26,8 +26,8 @@ x, y = np.mgrid[0:num_pixels, 0:num_pixels] #make grid
 x0 = y0 = num_pixels // 2 #set center as star location
 sigma = FWHM/(2 * np.sqrt(2*np.log(2))) #standard deviation
 
-min_value = int(input("Input lower threshold to plot (default is 0): ") or "0")
-max_value = int(input("Input upper threshold to plot (default is 2048): ") or "2048")
+min_value = int(raw_input("Input lower threshold to plot (default is 0): ") or "0")
+max_value = int(raw_input("Input upper threshold to plot (default is 2048): ") or "2048")
 
 fig, ax = plt.subplots(figsize=(10, 8))
 
@@ -45,7 +45,7 @@ def animate(time):
     plt.clf()
     plt.xlim(min_value, max_value) #zoomed view of star
     plt.ylim(min_value, max_value) #zoomed view of star
-    plt.text(1940, 1960, time, fontsize=10, color='r')
+    plt.text(0,1, "Time: "+str(time), horizontalalignment='left', verticalalignment='bottom', transform=ax.transAxes, fontsize=10, color='r')
     plt.imshow(image, vmin=0, vmax=600, cmap='gray', origin='lower')
     plt.colorbar()
 
@@ -54,3 +54,4 @@ anim = animation.FuncAnimation(fig, animate, frames=np.arange(time, int_time+1, 
 plt.show()
 
 #new comment on 013019
+#new edits on 101819
