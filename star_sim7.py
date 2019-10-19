@@ -18,7 +18,7 @@ time_step = 2 #time step interval for animation
 int_time = 30 #total time in seconds
 gain = 3 #photons/electron
 bg_photons = 40. #photons/arcsecond
-FWHM = 4/.608 #converted from arcseconds to pixels
+FWHM = 4/pixel_size #converted from arcseconds to pixels
 
 np.random.seed(150000) #have constant random number set
 
