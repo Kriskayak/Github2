@@ -26,8 +26,8 @@ x, y = np.mgrid[0:num_pixels, 0:num_pixels] #make grid
 x0 = y0 = num_pixels // 2 #set center as star location
 sigma = FWHM/(2 * np.sqrt(2*np.log(2))) #standard deviation
 
-min_value = int(input("Input lower threshold to plot (default is 0): ") or "0")
-max_value = int(input("Input upper threshold to plot (default is 2048): ") or "2048")
+min_value = int(raw_input("Input lower threshold to plot (default is 0): ") or "0")
+max_value = int(raw_input("Input upper threshold to plot (default is 2048): ") or "2048")
 
 fig, ax = plt.subplots(figsize=(10, 8))
 
