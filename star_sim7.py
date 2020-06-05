@@ -18,7 +18,7 @@ time_step = 2 #time step interval for animation
 int_time = 30 #total time in seconds
 gain = 3 #photons/electron
 bg_photons = 40. #photons/arcsecond
-FWHM = 4/.608 #converted from arcseconds to pixels
+FWHM = 4/pixel_size #converted from arcseconds to pixels
 
 np.random.seed(150000) #have constant random number set
 
@@ -45,7 +45,7 @@ def animate(time):
     plt.clf()
     plt.xlim(min_value, max_value) #zoomed view of star
     plt.ylim(min_value, max_value) #zoomed view of star
-    plt.text(1940, 1960, time, fontsize=10, color='r')
+    plt.text(0,1, "Time: "+str(time), horizontalalignment='left', verticalalignment='bottom', transform=ax.transAxes, fontsize=10, color='r')
     plt.imshow(image, vmin=0, vmax=600, cmap='gray', origin='lower')
     plt.colorbar()
 
@@ -54,3 +54,4 @@ anim = animation.FuncAnimation(fig, animate, frames=np.arange(time, int_time+1, 
 plt.show()
 
 #new comment on 013019
+#new edits on 101819

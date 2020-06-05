@@ -76,5 +76,7 @@ class CirclePlot(GraphScene):
     
     def func_to_graph2(self,x):
         return np.cos(2*np.pi*x) + 1
+    
+    # idle comments
 
 
